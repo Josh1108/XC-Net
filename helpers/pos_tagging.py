@@ -4,8 +4,6 @@ model="en_core_web_sm"
 def pos_tag_job(job):
   nlp = spacy.load(model)
   job1=nlp(job)
-  for token in job1:
-      print(token.text, token.pos_, token.tag_)
   return job1
 
 def remove_verb(job):
@@ -19,6 +17,6 @@ def remove_verb(job):
   jd = " ".join(job_tok)
   return jd
 
-job= "requirements preferably least 1 year relevant exp providing support director admin manager assisting daily day day activities carry indoor sales network tele marketing exp willing learn also generate quotation invoicing etc sales coordination functions"
+# job= "requirements preferably least 1 year relevant exp providing support director admin manager assisting daily day day activities carry indoor sales network tele marketing exp willing learn also generate quotation invoicing etc sales coordination functions"
 
-print(remove_verb(job))
+# print(remove_verb(job))

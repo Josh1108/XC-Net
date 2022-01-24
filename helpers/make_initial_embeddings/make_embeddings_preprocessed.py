@@ -21,13 +21,13 @@ modelpath="../../data/COLING/New-FTCondensedData/jobfasttext.bin" # only for fas
 testpath = '/home/jsk/skill-prediction/data/COLING/trn_X.txt'
 # labelpath='../data/COLING/Y.txt'
 # trainembpath="../data/COLING/Fine-FTCondensedData/trn_point_embs.npy"
-testembpath="/home/jsk/skill-prediction/data/COLING/New-FT-true-label-concatCondensedData/trn_point_embs.npy"
+testembpath="/home/jsk/skill-prediction/data/COLING/New-FT-POSCondensedData/trn_point_embs.npy"
 # labelembpath="../data/COLING/Fine-FTCondensedData/label_embs.npy"
 # testembpath="/home/jsk/skill-prediction/data/COLING-intermediate/New-FTCondensedData/tst_point_embs.npy"
 
 train = True
 model_name='fasttext'
-preprocess_type = 'true-label-concat'
+preprocess_type = 'pos-tag'
 
 
 def make_embs(model,path,vectorfilepath,model_name,dim =300,save_df='/home/jsk/skill-prediction/XC-Net/dumps/df.csv',preprocess_type = preprocess_type,save_file=False):

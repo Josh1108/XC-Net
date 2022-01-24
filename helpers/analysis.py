@@ -42,6 +42,8 @@ def preprocess(corpus,type:str = 'tf_idf',k=10):
         return lbl_from_job(corpus)
     elif type=='tf-idf-gensim':
         return tf_idf_gensim(corpus,k)
+    elif type =='pos-tag':
+        return pos_tag(corpus)
     else:    
         return NotImplementedError
 
@@ -85,9 +87,10 @@ def tf_idf_gensim(corpus,k=10):
 
 def pos_tag(corpus):
     corpus_filt = []
-    for corp in corpus:
+    for corp in tqdm(corpus):
         corp_filt = remove_verb(corp)
         corpus_filt.append(corp_filt)
+    assert len(corpus) == len(corpus_filt)
     return corpus_filt
 
 def tf_idf(corpus,k=10):

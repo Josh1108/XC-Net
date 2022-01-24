@@ -12,7 +12,7 @@ def combine_vec(file1 = '/home/jsk/skill-prediction/data/COLING/Fine-FTCondensed
     else:
         arr3 = np.concatenate((arr1,arr2),axis =0)
     print(arr3.shape)
-    np.save('/home/jsk/skill-prediction/data/CAB-COLING/New-FT-meanCondensedData/trn_point_embs.npy',arr3)
+    np.save('/home/jsk/skill-prediction/data/COLING/New-FT-meanCondensedData/trn_point_embs.npy',arr3)
     return arr3
 
 combine_vec(take_mean = True)
